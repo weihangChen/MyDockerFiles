@@ -40,6 +40,11 @@ ros-kinetic-transmission-interface \
 ros-kinetic-turtlebot-teleop \
 ros-kinetic-vision-opencv \
 ros-kinetic-xacro \
-ros-kinetic-catkin
+ros-kinetic-catkin \
+libgtest-dev && \
+cd /usr/src/gtest && \
+cmake CMakeLists.txt && \
+make && \
+cp *.a /usr/lib
 
  
