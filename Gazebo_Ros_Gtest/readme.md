@@ -1,4 +1,4 @@
-## in house ros project setup for local dev enronment setup
+## in house ros project setup + demo app
 
 ### Project Structure
 this project simulates the [catkin work space](http://wiki.ros.org/catkin/Tutorials/create_a_workspace). `GAZEBO_ROS_GTEST/src` contains two packages. 
