@@ -1,13 +1,23 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(beginner_tutorials)
 
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
-generate_messages(DEPENDENCIES std_msgs)
-catkin_package()
-include_directories(include ${catkin_INCLUDE_DIRS})
-#rosnode example
+find_package(
+  catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+)
+
+
+catkin_package(
+)
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
+
+
 add_executable(talker src/talker.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
 add_dependencies(talker beginner_tutorials_generate_messages_cpp)
-#unit test example
-catkin_add_gtest(utest test/utest.cpp)
+
